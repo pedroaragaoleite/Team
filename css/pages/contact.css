@@ -1,0 +1,132 @@
+.contacts {
+  position: relative;
+}
+.contacts__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.contacts__headers {
+  text-align: center;
+}
+.contacts__h1 {
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 16px;
+}
+.contacts__h2 {
+  font-size: 32px;
+  line-height: 48px;
+}
+.contacts__services {
+  margin-top: 40px;
+  margin-bottom: 56px;
+}
+.contacts__items {
+  display: flex;
+  flex-direction: column;
+}
+.contacts__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.contacts__text {
+  text-align: left;
+  font-size: 18px;
+  line-height: 28px;
+  margin-left: 23px;
+}
+.contacts__img {
+  width: 20%;
+}
+.contacts__content {
+  width: 80%;
+}
+.contacts__form {
+  width: 100%;
+  margin-bottom: 112px;
+}
+.contacts__form input, .contacts__form textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 24px;
+  background-color: #014e56;
+  border: 0;
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    position: relative;
+    padding-left: 113px;
+    padding-right: 113px;
+  }
+  .contacts__message {
+    padding: 0 110px;
+  }
+  .contacts__circle1 {
+    position: absolute;
+    background: url("../assets/bg-pattern-about-2-contact-1.svg");
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    left: -100px;
+    overflow: hidden;
+  }
+  .contacts__circle2 {
+    position: absolute;
+    background: url("../assets/bg-pattern-contact-2.svg");
+    background-repeat: no-repeat;
+    width: 201px;
+    height: 225px;
+    bottom: 0;
+    right: -100px;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 960px) {
+  .contacts {
+    padding-left: 165px;
+    padding-right: 165px;
+    display: flex;
+  }
+  .contacts__content {
+    width: 100%;
+  }
+  .contacts__text {
+    text-align: left;
+    width: 100%;
+    height: 100%;
+  }
+  .contacts__headers {
+    width: 100%;
+    text-align: left;
+  }
+  .contacts__h1 {
+    font-size: 64px;
+  }
+  .contacts__services {
+    width: 100%;
+  }
+  .contacts__form {
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 112px;
+  }
+  .contacts__form input, .contacts__form textarea {
+    width: 80%;
+    margin-left: 20%;
+  }
+  .contacts__form button {
+    margin-left: 20%;
+  }
+}
+
+/*# sourceMappingURL=contact.css.map */

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>My Team</title>
+</head>
+<body>
+     <!-- Navigation bar -->
+     <header class=" bgcolor-green">
+        <nav class="nav">
+            <div class="nav__logo">
+                <img src="./../assets/logo.svg" alt="">
+            </div>
+            <button  aria-controls="nav__navigation" aria-expanded="false" class="mobile__btn">
+                <span class="sr-only">Menu</span>
+            </button>
+            <div class="nav__bar">
+                <div id="nav__navigation" class="nav__navigation" data-visible="false">                    
+                    <ul id="nav__menu" class="nav__menu" >
+                        <li class="nav__li">
+                            <a class="clr-white" href="./../index.html">home</a>
+                        </li>
+                        <li class="nav__li">
+                            <a class="clr-white" href="about.html">about</a>
+                        </li>
+                    </ul>
+                    <div class="nav__btn">
+                        <a class="btn-primary-light" href="contact.html">contact us</a>
+                    </div>
+                </div>              
+                
+            </div>            
+        </nav>
+    </header>
+    <!-- End of Navigation bar-->
+
+    <main>
+        <!-- Section Contact-->
+        <section class="contacts bgcolor-green">
+            <div class="contacts__circle1"></div>
+            <div class="contacts__content">                
+                <div class="contacts__headers">
+                    <h1 class="contacts__h1 clr-white">Contact</h1>
+                    <h2 class="contacts__h2 clr-coral">Ask us about</h2>
+                </div>
+                <div class="contacts__services">
+                    <div class="contacts__items">
+                        <div class="contacts__item">
+                            <div class="contacts__img">
+                                <img src="../assets/icon-person.svg" alt="">
+                            </div>
+                            <div class="contacts__content">
+                                <div class="contacts__text clr-white">
+                                    <p>
+                                        The quality of our talent network
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts__item">
+                            <div class="contacts__img">
+                                <img src="../assets/icon-cog.svg" alt="">
+                            </div>
+                            <div class="contacts__content">
+                                <div class="contacts__text clr-white">
+                                    <p>
+                                        Usage & implementation of our software
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts__item">
+                            <div class="contacts__img">
+                                <img src="../assets/icon-chart.svg" alt="">
+                            </div>
+                            <div class="contacts__content">
+                                <div class="contacts__text clr-white">
+                                    <p>
+                                        How we help drive innovation
+                                    </p>
+                                </div>
+                            </div>
+                        </div>                
+                    </div>
+                </div>                                
+            </div>
+            <div class="contacts__circle2"></div>
+            <div class="contacts__content">
+                <form class="contacts__form" action="">
+                    <input type="text"name="name" placeholder="Name">
+                    <input type="email" name="email" id="email" placeholder="Email Address">
+                    <input type="text" name="company" id="comp__name" placeholder="Company Name">
+                    <input type="text" name="title" id="title" placeholder="title">
+                    <textarea name="message" id="" cols="25" rows="5" placeholder="Message"></textarea>
+                    <button type="submit" class="btn-primary-submit">submit</button>
+                </form>
+            </div>  
+        </section>
+        <!-- End of Contact-->
+
+            <!-- Start Footer-->
+    <footer class="footer bgcolor-darkgreen">
+        <div class="footer__main">
+            <div class="footer__myteam">
+                <div class="footer__logo">
+                    <img src="../assets/logo.svg" alt="">
+                </div>
+                <ul class="footer__ul">
+                    <li class="footer__li">
+                        <a class="clr-white" href="./../index.html">home</a>
+                    </li>
+                    <li class="footer__li">
+                        <a class="clr-white" href="about.html">about</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__address clr-white">
+                <p>987 Hillcrest Lone</p>
+                <p>Irvine, CA</p>
+                <p>California 92714</p>
+                <p>Call us: 949-833-7432</p>
+            </div>
+        </div>        
+        <div class="footer__links">
+            <div class="footer__wrap">
+                <div class="footer__socialmedia">
+                    <div class="footer__icons">
+                        <a href="http://facebook.com"><img src="./../assets/icon-facebook.svg" alt=""></a>
+                    </div>
+                    <div class="footer__icons">
+                        <a href="http://pinterest"><img src="./../assets/icon-pinterest.svg" alt=""></a>
+                    </div>
+                    <div class="footer__icons">
+                        <a href="http://twitter"><img src="./../assets/icon-twitter.svg" alt=""></a>
+                    </div>
+                </div> 
+                <div class="footer__copyright clr-white">
+                    <p>Copyright 2020. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>                    
+    </footer>
+    <!-- End Footer-->
+
+  
+    <script src="../js/script.js"></script>
+</body>
+</html>
