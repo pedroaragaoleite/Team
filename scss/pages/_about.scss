@@ -1,0 +1,291 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/colors" as *;
+
+// About ----------------------
+.about {
+  height: 500px;
+  position: relative;
+  //   background: white;
+  &__content {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 24px 0 24px;
+    position: relative;
+  }
+  &__wrap {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 36px;
+    text-align: center;
+    padding: 0 20px;
+  }
+  &__line {
+    display: none;
+  }
+  &__message > p {
+    line-height: 2rem;
+  }
+  &__text {
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+  }
+  &__circle2 {
+    position: absolute;
+    background: url("../assets/bg-pattern-about-1-mobile-nav-1.svg");
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    right: 0;
+    // transform: translateX(-50%);
+    overflow: hidden;
+  }
+}
+
+@include m.media(md) {
+  .about {
+    height: 400px;
+    &__message {
+      padding: 0 110px;
+    }
+  }
+}
+
+@include m.media(lg) {
+  .about {
+    height: 500px;
+    &__content {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 165px 129px 165px;
+      height: 100%;
+    }
+    &__text {
+      text-align: left;
+      width: 50%;
+      height: 100%;
+    }
+    &__h1 {
+      line-height: 100px;
+    }
+    &__wrap {
+      width: 100%;
+      padding: 0;
+      text-align: left;
+      justify-content: flex-start;
+      margin-top: 0;
+      height: 300px;
+    }
+    &__message {
+      margin-top: 75px;
+      padding: 0;
+    }
+    &__line {
+      display: inline-block;
+      width: 50px;
+      height: 4px;
+    }
+  }
+}
+
+// Teams
+
+.team {
+  padding: 98px 24px 98px 24px;
+  position: relative;
+  &__circle1 {
+    position: absolute;
+    background-image: url("../assets/bg-pattern-about-2-contact-1.svg");
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    transform: rotate(180deg);
+  }
+  &__square2 {
+    position: absolute;
+    background-image: url("../assets/bg-pattern-home-4-about-3.svg");
+    background-repeat: no-repeat;
+    width: 147px;
+    height: 100px;
+    bottom: 0;
+    right: 0;
+  }
+  &__container {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+  &__member {
+    text-align: center;
+    margin-bottom: 52px;
+    position: relative;
+  }
+  &__h2 {
+    line-height: 32px;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  &__job {
+    font-size: 15px;
+    line-height: 25px;
+    font-style: italic;
+    padding-bottom: 56px;
+  }
+  &__message {
+    font-size: 15px;
+    line-height: 25px;
+    font-style: italic;
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+  &__h4 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  &__h4--padding {
+    font-size: 18px;
+    line-height: 28px;
+    padding-top: 35px;
+  }
+  &__img {
+    padding-top: 32px;
+    padding-bottom: 16px;
+  }
+  &__photo {
+    margin: 16px auto;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 2px solid $photoblue;
+  }
+  &__socialmedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 35px;
+  }
+  &__icons {
+    padding: 16px 8px;
+  }
+  &__btn {
+    position: absolute;
+    @include m.btn-about-circle;
+    font-size: 32px;
+    font-weight: 700;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -30px;
+  }
+}
+
+@include m.media(md) {
+  .team {
+    padding: 180px 97px 180px 97px;
+    &__wrap {
+      width: 75%;
+      padding-top: 100px;
+      margin: 0 auto;
+    }
+    &__container {
+      grid-template-columns: 50% 50%;
+      gap: 11px;
+    }
+  }
+}
+
+@include m.media(lg) {
+  .team {
+    padding: 140px 165px 140px 165px;
+    &__container {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+    }
+    &__wrap {
+      width: 100%;
+    }
+    &__stories {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+    &__story {
+      width: 30%;
+    }
+    &__h2 {
+      line-height: 48px;
+      font-size: 48px;
+      margin-bottom: 64px;
+    }
+    &__photo > img {
+      margin: 32px auto;
+    }
+  }
+}
+
+// Clientes
+.clients {
+  position: relative;
+  padding: 88px 40px 88px 40px;
+  &__h2 {
+    line-height: 32px;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  &__list {
+    padding: 0 82px;
+  }
+  &__logo {
+    padding-bottom: 52px;
+  }
+  &__logo > img {
+    margin: 0 auto;
+    width: 146px;
+  }
+  &__circle--client {
+    position: absolute;
+    background-image: url("../assets/bg-pattern-home-6-about-5.svg");
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 144px;
+    top: -77px;
+    left: -50px;
+    transform: rotate(90deg);
+  }
+}
+
+@include m.media(md) {
+  .clients {
+    padding: 100px 24px 100px 24px;
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      //   flex-direction: row;
+    }
+    &__logo {
+      padding-bottom: 0;
+    }
+    &__logo > img {
+      width: 61px;
+    }
+  }
+}
+
+@include m.media(lg) {
+  .clients {
+    &__logo > img {
+      width: 98px;
+    }
+  }
+}

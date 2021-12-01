@@ -1,0 +1,71 @@
+@use "sass:map";
+@use "../abstracts/variables" as *;
+@use "colors" as *;
+
+$utilities: (
+  "font-size": (
+    "prefix": "font",
+    "values": (
+      "sm": $font-size-sm,
+      "md": $font-size-md,
+      "lg": $font-size-lg,
+      "xl": $font-size-xl,
+      "xxl": $font-size-xxl,
+    ),
+  ),
+  "line-height": (
+    "prefix": "lh",
+    "values": (
+      0: 25px,
+      1: 28px,
+      2: 48px,
+      3: 56px,
+      4: 100px,
+    ),
+  ),
+  "background-color": (
+    "prefix": "bgcolor",
+    "values": (
+      "green": #014e56,
+      "sacramentogreen": #012f34,
+      "junglegreen": #004047,
+      "coral": #f67e7e,
+      "darkgreen": #002529,
+      "raptureblue": #79c8c7,
+      "policeblue": #2c6269,
+    ),
+  ),
+  "color": (
+    "prefix": "clr",
+    "values": (
+      "green": #014e56,
+      "coral": #f67e7e,
+      "white": #ffffff,
+      "raptureblue": #79c8c7,
+      "policeblue": #2c6269,
+      "junglegreen": #004047,
+      "sacramentogreen": #012f34,
+      "darkgreen": #002529,
+    ),
+  ),
+);
+
+// Generate utilities
+@each $property, $map in $utilities {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    .#{$prefix}-#{$k} {
+      #{$property}: $v;
+    }
+  }
+}
+
+// Generate colors
+
+// @each $color, $bgcolors in $colors {
+//   @each $bgcolor, $values in $bgcolors {
+//     --bgclr-#{$color}-#{$bgcolor}: #{$value};
+//   }
+// }

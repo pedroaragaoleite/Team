@@ -1,0 +1,338 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/colors" as *;
+
+// SHOWCASE ----------------------
+.showcase {
+  height: 500px;
+  position: relative;
+  //   background: white;
+  &__content {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 24px 0 24px;
+    position: relative;
+  }
+  &__wrap {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 36px;
+    text-align: center;
+    padding: 0 20px;
+  }
+  &__line {
+    display: none;
+  }
+  &__message > p {
+    line-height: 2rem;
+  }
+  &__text {
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+  }
+  &__circle2 {
+    position: absolute;
+    background: url("../assets/bg-pattern-home-2.svg");
+    background-repeat: no-repeat;
+    width: 358px;
+    height: 200px;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+  }
+}
+
+@include m.media(lg) {
+  .showcase {
+    height: 500px;
+    &__content {
+      flex-direction: row;
+      padding: 40px 165px 129px 165px;
+      height: 100%;
+    }
+    &__text {
+      text-align: left;
+      width: 50%;
+      height: 100%;
+    }
+    &__h1 {
+      line-height: 100px;
+    }
+    &__wrap {
+      width: 50%;
+      text-align: left;
+      justify-content: flex-start;
+      margin-top: 0;
+      height: 300px;
+    }
+    &__message {
+      margin-top: 75px;
+    }
+    &__line {
+      display: inline-block;
+      width: 50px;
+      height: 4px;
+    }
+    &__circle2 {
+      bottom: -100px;
+      left: calc(100% - 358px);
+    }
+  }
+}
+
+// SERVICES  -----------------------
+.services {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &__wrap {
+    width: 70%;
+    padding: 64px 24px 24px 24px;
+  }
+  &__h2 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  &__line--coral {
+    width: 50px;
+    height: 4px;
+    margin-bottom: 32px;
+  }
+  &__circle3 {
+    position: absolute;
+    background: url("../assets/bg-pattern-home-3.svg");
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 244px;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+  }
+  &__items {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+  &__item {
+    padding: 32px 24px;
+  }
+  &__img > img {
+    margin: 16px auto;
+  }
+  &__content {
+    text-align: center;
+  }
+  &__subtitle--coral {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  &__text {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+@include m.media(md) {
+  .services {
+    &__wrap {
+      width: 80%;
+      padding-left: 98px;
+    }
+    &__items {
+      width: 80%;
+      padding-left: 98px;
+    }
+    &__item {
+      display: flex;
+      padding: 32px 0;
+      width: 100%;
+    }
+    &__content {
+      text-align: left;
+      margin-left: 23px;
+    }
+  }
+}
+
+@include m.media(lg) {
+  .services {
+    flex-direction: row;
+    padding: 140px 165px;
+    &__wrap {
+      padding: 0;
+    }
+    &__h2 {
+      font-size: 48px;
+      line-height: 48px;
+    }
+    &__items {
+      width: 100%;
+    }
+    &__item {
+      width: 100%;
+    }
+    &__circle3 {
+      right: 0;
+      top: calc(100% - 244px);
+    }
+  }
+}
+
+// REVIEWS  --------------------------------
+
+.reviews {
+  padding: 140px 24px 160px 24px;
+  position: relative;
+  &__square {
+    position: absolute;
+    background-image: url("../assets/bg-pattern-home-4-about-3.svg");
+    background-repeat: no-repeat;
+    width: 147px;
+    height: 100px;
+    top: 0;
+    left: 0;
+  }
+  &__circle4 {
+    position: absolute;
+    background-image: url("../assets/bg-pattern-home-5.svg");
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 100px;
+    bottom: 0;
+    right: 0;
+  }
+  &__content {
+    padding-bottom: 48px;
+  }
+  &__title {
+    margin-bottom: 80px;
+  }
+  &__h2 {
+    line-height: 40px;
+    font-size: 32px;
+    text-align: center;
+  }
+  &__stories {
+    text-align: center;
+  }
+  &__job {
+    font-size: 13px;
+    font-style: italic;
+  }
+  &__h4 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  &__review {
+    z-index: 1000;
+  }
+  &__text {
+    position: relative;
+    z-index: 1000 !important;
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 16px;
+  }
+  &__photo > img {
+    margin: 16px auto;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: 2px solid $photoblue;
+  }
+  &__quote {
+    position: relative;
+  }
+  &__img {
+    width: 67px;
+    height: 56px;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@include m.media(md) {
+  .reviews {
+    padding: 0;
+    &__wrap {
+      width: 75%;
+      padding-top: 100px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@include m.media(lg) {
+  .reviews {
+    padding: 140px 165px 140px 165px;
+    &__wrap {
+      width: 100%;
+    }
+    &__stories {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+    &__story {
+      width: 30%;
+    }
+    &__h2 {
+      line-height: 48px;
+      font-size: 48px;
+    }
+    &__photo > img {
+      margin: 32px auto;
+    }
+  }
+}
+
+// CONTACT ---------------------------------
+.contact {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 83px 24px 124px 24px;
+  text-align: center;
+  &__circle5 {
+    position: absolute;
+    background-image: url("../assets/bg-pattern-home-6-about-5.svg");
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 144px;
+    bottom: 0;
+    left: 0;
+  }
+  &__h2 {
+    font-size: 32px;
+    line-height: 32px;
+    padding: 0 40px;
+    margin-bottom: 24px;
+  }
+  &__btn {
+    font-size: 15px;
+  }
+}
+
+@include m.media(md) {
+  .contact {
+    &__wrap {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    &__h2 {
+      margin-bottom: 0;
+    }
+  }
+}

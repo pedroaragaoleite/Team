@@ -1,0 +1,20 @@
+@use "../abstracts/mixins" as m;
+
+.btn-primary-light {
+  @include m.btn-primary-light;
+}
+.btn-primary-light-mobile {
+  @include m.btn-primary-light-mobile;
+}
+
+.btn-primary-green {
+  @include m.btn-primary-green;
+}
+
+.btn-about-circle {
+  @include m.btn-about-circle;
+}
+
+.btn-primary-submit {
+  @include m.btn-primary-submit;
+}
