@@ -149,6 +149,21 @@ body {
   border: 2px solid #014e56;
 }
 
+.btn-primary-light-mobile {
+  width: 100px;
+  height: 48px;
+  border-radius: 24px;
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+.btn-primary-light-mobile:hover {
+  color: #014e56;
+  background: #ffffff;
+  border: 2px solid #014e56;
+}
+
 .btn-primary-green {
   border-radius: 24px;
   border: 2px solid #012f34;
@@ -566,7 +581,7 @@ header .mobile__btn[aria-expanded=true] {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 83px 24px;
+  padding: 83px 24px 124px 24px;
   text-align: center;
 }
 .contact__circle5 {
